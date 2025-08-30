@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>YT Boombox</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https: data: blob:; script-src 'self' https://www.youtube.com https://s.ytimg.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com;">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🎵 YT Boombox</h1>
+    <div class="search"> <input id="searchInput" type="text" placeholder="Search songs or artists…" /> <button
+        id="searchBtn">Search</button> </div> <button id="openMiniBtn" class="mini-btn">Open Mini Card</button>
+  </header>
+  <main>
+    <section class="left">
+      <h2>Results</h2>
+      <div id="results" class="results"></div>
+    </section>
+    <section class="right">
+      <h2>Now Playing</h2> <!-- Keep the real player in main window -->
+      <div id="player" class="player"></div>
+      <div id="nowTitle" class="title"></div> <!-- Controls -->
+      <div class="controls"> <button id="prevBtn">⏮️ Prev</button> <button id="nextBtn">⏭️ Next</button> </div>
+      <!-- Queue List -->
+      <h3 style="margin-top:12px; font-size:14px; color:#aab2c5;">Queue</h3>
+      <div id="queueList" class="queue"></div>
+    </section>
+  </main> <!-- YouTube IFrame API (main window uses it) -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

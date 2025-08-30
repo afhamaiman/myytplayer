@@ -1,0 +1,113 @@
+
+body {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: sans-serif;
+  }
+  
+  .card {
+    position: relative;
+    width: 1000px; 
+    height: 280px; 
+    background: url("./musicard.png") no-repeat center center;
+    background-size: cover;   
+    border-radius: 40px;
+    overflow: hidden;          
+    cursor: move;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .close-btn:hover { background: red; }
+  
+  .thumb-container {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    width: 120px;
+    height: 120px;
+  }
+  .thumb-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; 
+  }
+  .progress-ring {
+    position: absolute;
+    top: 0px;
+    left: 800px;
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+  }
+  .progress-ring circle {
+    fill: none;
+    stroke-width: 6;
+  }
+  .progress-ring .bg { stroke: rgba(255,255,255,0.2); }
+  .progress-ring .progress {
+    stroke: #ffffff;
+    stroke-dasharray: 339;
+    stroke-dashoffset: 339;
+    transition: stroke-dashoffset 0.12s linear; 
+  }
+  
+  .title {
+    position: absolute;
+    top: 40px;
+    left: 190px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .artist {
+    position: absolute;
+    top: 72px;
+    left: 190px;
+    font-size: 16px;
+    color: orange;
+  }
+ 
+  .controls {
+    position: absolute;
+    bottom: 26px;
+    left: 400px;
+  }
+  .controls button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  .controls button:hover { opacity: 0.85; }
+  
+  .card {
+    -webkit-app-region: drag;
+  }
+  button, .controls {
+    -webkit-app-region: no-drag; 
+  }
+  
