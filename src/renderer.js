@@ -1,5 +1,5 @@
 
-const API_KEY = "AIzaSyB5e69TE5oK8ZZg2XMEzm7XpQFTLOfPrpQ";
+const API_KEY = "REPLACE WITH YOUR API";
 
 let player = null;
 let queue = [];
