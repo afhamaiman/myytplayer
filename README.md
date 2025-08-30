@@ -20,6 +20,7 @@ and a sleek custom design inspired by music card UI.
 - npm start (run dev mode)
 - npm run build (build production app)
 
+- replace your youtube api on renderer.js
 
 🛠️ Tech Stack
 
@@ -31,15 +32,6 @@ Node.js
 
 [HTML5 / CSS3 / JS] — Frontend UI
 
-myytplayer
-│── src/
-│   ├── index.html        # Main app UI
-│   ├── mini.html         # Mini player window
-│   ├── mini.css          # Mini player styles
-│   ├── main.js           # Electron entry
-│   ├── musicard.png      # Background UI for player
-│── package.json          # Dependencies & scripts
-│── README.md             # This file
 
 ⚠️ Disclaimer
 
